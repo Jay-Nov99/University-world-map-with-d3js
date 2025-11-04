@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    background-color: #5c4b99;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #5c4b99;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+nav {
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 140px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 50px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.visualization-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px; /* Providing space from the header */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow around the content area */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #ffffff; /* White background for contrast */
+}
+
+.info-text p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #5c4b99;
+}
+
+#mainControls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#mainControls button {
+  font-size: 16px;
+  padding: 12px 24px;
+  margin: 0 10px;
+  background-color: #4a148c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease, color 0.3s ease;
+}
+
+#mainControls button:hover {
+  background-color: #6a1b9a;
+}
+
+#mainControls button.active {
+  background-color: #ff4081;
+  border: 2px solid #ff4081;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#mapControls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#mapControls input[type="radio"] {
+  margin: 0 10px;
+  display: none;
+}
+
+#mapControls label {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #311b92;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#mapControls input[type="radio"]:checked + label {
+  background-color: #ff4081;
+  border: 2px solid #ff4081;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+svg {
+  width: 80vw; /* 80% of the viewport width */
+  height: 70vh; /* Adjust height proportionally */
+  margin: 0 auto;
+  display: block;
+}
+
+.tooltip {
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+  display: none; /* Start hidden and show on hover */
+}
+
+#dataTableContainer {
+  display: none; /* Hide the data table container by default */
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+#dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+#dataTable th,
+#dataTable td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+
+#dataTable th {
+  background-color: #4a148c;
+  color: white;
+  cursor: pointer;
+}
+
+#dataTable tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}

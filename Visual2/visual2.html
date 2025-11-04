@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Global Health Data Insights</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="../index.html"><img src="/images/logo.png" alt="Logo" class="logo" /></a>
+  
+        <a href="../index.html" style="text-decoration: none; color: inherit;"><h1>DataViz Insights</h1></a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="/Visual1/visual1.html">Visualization 1</a>
+          </li>
+          <li>
+            <a href="/Visual2/visual2.html">Visualization 2</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="visualization-container">
+        <div class="info-text">
+          <p>Select a view to explore global health data interactively:</p>
+        </div>
+        <div id="mainControls">
+          <button id="showMap" class="active">Map View</button>
+          <button id="showChart">Chart View</button>
+          <button id="showData">Data View</button>
+        </div>
+        <div id="mapControls">
+          <input
+            type="radio"
+            id="smoking"
+            name="mapData"
+            value="smoking"
+            checked
+          />
+          <label for="smoking">Smoking Deaths</label>
+          <input
+            type="radio"
+            id="secondhandSmoking"
+            name="mapData"
+            value="secondhand_smoke"
+          />
+          <label for="secondhandSmoking">Secondhand Smoking Deaths</label>
+          <input
+            type="radio"
+            id="airborneDiseases"
+            name="mapData"
+            value="ambient_particulate_matter_pollution"
+          />
+          <label for="airborneDiseases">Airborne Diseases Deaths</label>
+        </div>
+        <svg width="960" height="600"></svg>
+        <div class="tooltip"></div>
+        <!-- Placeholders for Chart and Data views -->
+        <div id="chartContainer" style="display: none">
+          <!-- Chart will be generated here -->
+        </div>
+        <div id="dataTableContainer" style="display: none">
+          <table id="dataTable">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>Code</th>
+                <th>Smoking Deaths</th>
+                <th>Secondhand Smoke Deaths</th>
+                <th>Airborne Diseases Deaths</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be dynamically inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright © 2024 Visual Data Insights. All rights reserved.</p>
+    </footer>
+    <script src="/Visual2/script.js"></script>
+  </body>
+</html>

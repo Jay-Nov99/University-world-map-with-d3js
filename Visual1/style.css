@@ -1,0 +1,279 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    background-color: #5c4b99;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #5c4b99;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+nav {
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 140px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 50px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+#title-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#main-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#sub-title {
+    font-size: 1.2em;
+    color: #555;
+    margin: 5px 0 0 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.controls label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.controls select {
+    margin-right: 20px;
+}
+
+#map-container {
+    width: 60%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    border: none;
+    border-radius: 20px;
+}
+
+#legend-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#legend-container>svg {
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    border: none;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+#color-bar-group {
+    width: 80%;
+    height: auto;
+}
+
+svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.no-data {
+    fill: url(#diagonalHatch);
+    stroke: black;
+    stroke-width: 0.15;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: left;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font: 12px sans-serif;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    pointer-events: none;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-content {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tooltip-country {
+    display: block;
+    background-color: #e0e0e0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 24px;
+}
+
+.tooltip-year {
+    display: block;
+    background-color: #e0e0e0;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.tooltip-value {
+    font-size: 24px;
+    color: steelblue;
+    margin-bottom: 10px;
+}
+
+.country {
+    cursor: pointer;
+}
+
+path {
+    stroke: #666;
+    stroke-width: 0.5px;
+}
+
+.highlight {
+    stroke-width: 1.5px;
+    stroke: black;
+}
+
+.custom-select {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.3;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    appearance: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 viewBox%3D%270 0 4 5%27%3E%3Cpath fill%3D%27%23343a40%27 d%3D%27M2 0L0 2h4zm0 5L0 3h4z%27/%3E%3C/svg%3E');
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+.custom-select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-select option {
+    padding: 10px;
+}
+
+.controls label {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}

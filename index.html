@@ -1,19 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!---defining the title of the page--->
-    <title>World Map with D3.js!</title>
-    <!---specifying the relationship between current document and linked document using 'rel' and 'href' specifies the location of linked document--->
-    <link rel="stylesheet" href="styles.css">
-    <!---loading file from D3.js package--->
-    <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
-    <!---loading file from TopoJSON package--->
-    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
-  </head>
-  <body>
-    <!---mentioning the dimensions of SVG graphic--->
-    <svg width="960" height="500"></svg>
-    <!---linking the bundle.js file which is used to bundle JavaScript modules into a single JavaScript file--->
-    <script src="bundle.js"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Analytics</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="../index.html"><img src="/images/logo.png" alt="Logo" class="logo" /></a>
+            <a href="../index.html" style="text-decoration: none; color: inherit;"><h1>DataViz Insights</h1></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/Visual1/visual1.html">Visualization 1</a>
+                </li>
+                <li>
+                    <a href="/Visual2/visual2.html">Visualization 2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro">
+        <h2>Welcome to Our Visual Analytics Platform</h2>
+        <p>Discover insights through our interactive visualizations that provide deep analysis of various datasets.</p>
+    </section>
+    <section class="visualizations-row">
+        <article class="visualization-item">
+            <h3>Non-medical determinants of health (Edition 2023)</h3>
+            <a href="/Visual1/visual1.html" target="_blank">
+                <img src="/images/example-visual1.png" alt="Preview of Visualization 1" />
+            </a>
+            <p>
+                This dataset on health risks examines the non-medical determinants of health by comparing food, alcohol, tobacco consumption (smoking) and body weight (incidence of obesity or overweight) among countries. The data are expressed in different measures such as calories, grams, kilo, gender and population.
+            </p>
+        </article>
+        <article class="visualization-item">
+            <h3>Filtered Deaths Analysis for 2019</h3>
+            <a href="/Visual2/visual2.html" target="_blank">
+                <img src="/images/example-visual2.png" alt="Preview of Visualization 2" />
+            </a>
+            <p>
+                Click to view detailed visual analysis of various causes of death in 2019, including secondhand smoke exposure, smoking, and ambient particulate matter pollution.
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p>Copyright © 2024 Visual Data Insights. All rights reserved.</p>
+    </footer>
+</body>
 </html>

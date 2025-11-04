@@ -1,0 +1,16 @@
+Website that I've used to create Visualisation 1:
+
+Ideas for the visualisation:    https://ourworldindata.org/obesity
+
+Create world map:   https://www.youtube.com/watch?v=urfyp-r255A&t=1s
+
+Map Zoom on continent:  https://maximethoonsen.github.io/d3/worldmap/enable-zoom-on-continent-and-countries/
+(For this one, I have to inspect the source by using Chrome)
+
+Bounce zoom to continent:   https://observablehq.com/@d3/zoom-to-bounding-box
+
+
+Custom-geo-json (Format document with JSON formatter inside VS Code):   https://geojson-maps.kyd.au/
+I'm using this custom geo json because it contains continent features, so I can implement continents selection.
+
+
