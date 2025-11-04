@@ -4,9 +4,9 @@ A data-rich visualization project built using the D3.js library, showcasing geog
 
 ## 🚀 Deployment
 
-[![Deploy Button](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/jay-beos-projects/university-world-map-with-d3js)
+[![Deploy Button](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://university-world-map-with-d3js.vercel.app/)
 
-[View the Live Demo Here!](https://vercel.com/jay-beos-projects/university-world-map-with-d3js)
+[View the Live Demo Here!](https://university-world-map-with-d3js.vercel.app/)
 
 ## Key Features
 
